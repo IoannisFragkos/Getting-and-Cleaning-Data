@@ -9,4 +9,4 @@
 
 - **codebook.md**:      Markdown file that explains the code inside run_analysis.R
 
-- **run_analysis.html**:  compiled html document, created with knitr
+- **run_analysis.pdf**:  compiled document with results, created with knitr

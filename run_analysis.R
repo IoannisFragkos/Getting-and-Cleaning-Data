@@ -27,7 +27,8 @@ rm(train_index, test_index)
 merged <- rbind_list(train, test)
 # cleanup
 rm(train, test)
-merged
+merged <- tbl_df(merged)
+head(merged)
 
 ##### 2. Extract only mean and standard deviation from each observation ##### AND
 ##### 4. Appropriately label the data set with descriptive variable names.  #####
@@ -44,7 +45,7 @@ features <- filter(features, grepl(keep_names, features$V2))
 names(merged) <- extract_numeric(names(merged))
 merged <- select(merged, features$V1)
 names(merged) <- features$V2
-names(merged)
+head(names(merged))
 
 ##### 3. Use descriptive activity names to name the activities in the data set #####
 # 1. Gather labels
@@ -62,7 +63,7 @@ merged <- left_join(merged, activity_labels)
 merged$Activity <- NULL
 merged <- rename(merged, Activity = V2)
 rm(activity_train_file, activity_test_file)
-merged$Activity
+head(merged$Activity)
 
 ##### 5. From the data set in step 4, create a second, 
 ##### independent tidy data set with the average of each variable for each activity and each subject. #####
@@ -75,5 +76,6 @@ merged <- bind_cols(merged, subjects)
 # make the new dataframe with summary statistics
 grouped_data <- group_by(merged, Activity, SubjectID)
 tidy_data <- summarise_each(grouped_data, funs(mean)) # <-- final clean dataset
-tidy_data
+head(tidy_data)
 write.csv(tidy_data, './tidy_data.csv')
+write.csv(merged, './merged.csv')

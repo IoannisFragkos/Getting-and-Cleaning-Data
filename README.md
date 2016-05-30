@@ -10,3 +10,5 @@
 - **codebook.pdf**:      Codebook file that explains the choices made when cleaning the data, and their brief description.
 
 - **run_analysis.pdf**:  compiled document with results, created with knitr
+
+Note that the file merged.csv is not submitted due to space limitations, but it can be readily reproduced by running the script `run_analysis.R`

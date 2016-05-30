@@ -24,5 +24,6 @@ The script `run_analysis.R` has the following distinct parts:
 - Part 3: Relabels the activity names from numbers (1, 2, ...) to actual activity descriptions (LAYING, SITTING, etc).
 - Part 5: from the above merged dataset, creates a new tidy dataset that reports the average of each variable for each subject-activity combination.
 - Outputs two distinct csv files with the tidy dataset (`tidy_data.csv`) and the merged dataset of steps 1-4 (`merged.csv`) respectively.
-- 
+ 
+
 The file is faily commended and it should be straightforward to follow.

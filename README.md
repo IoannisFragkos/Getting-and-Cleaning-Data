@@ -7,6 +7,6 @@
 
 - **tidy_data.csv**:    File with tidy data, that contains the average of each variable for each activity and each subject, as explained in the assignment.
 
-- **codebook.md**:      Markdown file that explains the code inside run_analysis.R
+- **codebook.pdf**:      Codebook file that explains the choices made when cleaning the data, and their brief description.
 
 - **run_analysis.pdf**:  compiled document with results, created with knitr
